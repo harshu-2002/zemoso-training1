@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant</title>
+    <link rel="stylesheet" href="restaurant.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
+
+        </style>
+</head>
+
+<body>
+    <div class="main_body">
+        <div class="table">
+            <p class="heading">Tables</p>
+            <input id="tablesearch" type="text" name="search" placeholder="Search table">
+            <main>
+                <button class="table-item">
+                    <p class="table_heading">Table-1</p>
+                    <div class="table_details" id="0">
+                        <p>total : <span class="amount">0</span></p>
+                        <p>Items : <span class="items">0</span></p>
+                    </div>
+
+                </button>
+                <button class="table-item">
+                    <p class="table_heading">Table-2</p>
+                    <div class="table_details" id="1">
+                        <p>total : <span class="amount">0</span></p>
+                        <p>Items : <span class="items">0</span></p>
+                    </div>
+                </button>
+                <button class="table-item">
+                    <p class="table_heading">Table-3</p>
+                    <div class="table_details" id="2">
+                        <p>total : <span class="amount">0</span></p>
+                        <p>Items : <span class="items">0</span></p>
+                    </div>
+                </button>
+            </main>
+        </div>
+        <div class="menu">
+            <p class="heading">Menu</p>
+            <input id="menusearch" type="text" placeholder="search for item...by course,by food">
+            <main>
+                <div class="menu_items biriyani" id="chickenbiriyani" draggable="true">
+                    <div class="item-name">Chicken Biriyani</div>
+                    <div><span>250</span></div>
+                </div>
+                <div class="menu_items biriyani" id="muttonbiriyani" draggable="true">
+                    <div class="item-name">Mutton Biriyani</div>
+                    <div><span>350</span></div>
+                </div>
+                <div class="menu_items biriyani" id="mixedbiriyani" draggable="true">
+                    <div class="item-name">Mixed Biriyani</div>
+                    <div><span>450</span></div>
+                </div>
+                <div class="menu_items starters" id="chickenmanchurian" draggable="true">
+                    <div class="item-name">Chicken Manchurian</div>
+                    <div><span>260</span></div>
+                </div>
+                <div class="menu_items starters" id="chicken65" draggable="true">
+                    <div class="item-name">Chicken 65</div>
+                    <div><span>240</span></div>
+                </div>
+                <div class="menu_items starters" id="RRchicken" draggable="true">
+                    <div class="item-name">RR Chicken</div>
+                    <div><span>280</span></div>
+                </div>
+                <div class="menu_items starters" id="egg65" draggable="true">
+                    <div class="item-name">Egg 65</div>
+                    <div><span>190</span></div>
+                </div>
+                <div class="menu_items drinks" id="thumsup" draggable="true">
+                    <div class="item-name">Thums Up</div>
+                    <div><span>100</span></div>
+                </div>
+                <div class="menu_items drinks" id="mountaindew" draggable="true">
+                    <div class="item-name">Mountain Dew</div>
+                    <div><span>80</span></div>
+                </div>
+                <div class="menu_items drinks" id="sprite" draggable="true">
+                    <div class="item-name">Sprite</div>
+                    <div><span>100</span></div>
+                </div>
+                <div class="menu_items drinks" id="coco_cola" draggable="true">
+                    <div class="item-name">Coco-cola</div>
+                    <div><span>100</span></div>
+                </div>
+                <div class="menu_items rice" id="boiled_rice" draggable="true">
+                    <div class="item-name">Boiled Rice</div>
+                    <div><span>140</span></div>
+                </div>
+                <div class="menu_items rice" id="zeera_rice" draggable="true">
+                    <div class="item-name">Zeera Rice</div>
+                    <div><span>160</span></div>
+                </div>
+                <div class="menu_items rice" id="chicken_fried_rice" draggable="true">
+                    <div class="item-name">Chicken Fried Rice</div>
+                    <div><span>260</span></div>
+                </div>
+            </main>
+            <div class="modal hide" style="overflow-x: auto;">
+                <button class="close-modal">&times;</button>
+                <table id="table" class="modal-container">
+                    <tr>
+                        <th>S No</th>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </tr>
+                </table>
+
+            </div>
+            <div class="overlay hide"></div>
+        </div>
+    </div>
+    <script src="drag_drop.js"></script>
+    <script src="initializtion.js"></script>
+    <script src="window_modal.js"></script>
+</body>
+
+</html>
